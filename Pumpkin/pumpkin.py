@@ -1,28 +1,29 @@
+import movimentacao
+
 def plantar_abobora():
-	direcao = [North, South]
-	indice_dir = 0
-	while True:
-		todas_crescidas = True
+	plantar_primeira_vez()
+
+	estragadas = recuperar_aboboras_estragadas()
+
+	for x, y in estragadas:
+		movimentacao.goto(x, y)
+		while not can_harvest():
+			plant(Entities.Pumpkin)
+				
+def plantar_primeira_vez():
+	for _ in range(get_world_size()):
+		till()
+		plant(Entities.Pumpkin)
+		use_item(Items.Water)
+		use_item(Items.Water)
+		move(North)			
+
+def recuperar_aboboras_estragadas():
+	estragadas = []
+	for _ in range(get_world_size()):
+		if not can_harvest():
+			plant(Entities.Pumpkin)
+			estragadas.append((get_pos_x(), get_pos_y()))
+		move(North)
 		
-		for _ in range(get_world_size()):
-			if get_ground_type() != Grounds.Soil:
-				till()
-				plant(Entities.Pumpkin)
-				
-			if get_water() < 0.5:
-				use_item(Items.Water)
-				use_item(Items.Water)
-				
-			if not can_harvest():
-				plant(Entities.Pumpkin)
-				todas_crescidas = False
-				
-			move(direcao[indice_dir % 2])
-		
-		indice_dir += 1
-		
-		if todas_crescidas:
-			break
-				
-			
-					
+	return estragadas
