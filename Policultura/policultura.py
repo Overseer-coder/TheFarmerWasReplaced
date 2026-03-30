@@ -29,6 +29,6 @@ def plantar_policultura():
 			till()
 			
 		if get_water() < 0.5:
-			use_item(Items.Water)
+			use_item(Items.Water, 2)
 
 		plant(entity)

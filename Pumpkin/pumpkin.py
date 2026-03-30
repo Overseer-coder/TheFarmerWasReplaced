@@ -14,8 +14,7 @@ def plantar_primeira_vez():
 	for _ in range(get_world_size()):
 		till()
 		plant(Entities.Pumpkin)
-		use_item(Items.Water)
-		use_item(Items.Water)
+		use_item(Items.Water, 2)
 		move(North)			
 
 def recuperar_aboboras_estragadas():

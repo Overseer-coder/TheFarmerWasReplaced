@@ -9,8 +9,7 @@ def plantar_alternado(entities, fator):
 				inner_fator += 1
 				
 			if get_water() < 0.5:
-				use_item(Items.Water)
-				use_item(Items.Water)
+				use_item(Items.Water, 2)
 				
 			if can_harvest():
 				harvest()
