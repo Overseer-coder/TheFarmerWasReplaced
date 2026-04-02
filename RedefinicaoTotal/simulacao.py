@@ -2,4 +2,4 @@ unlocks = {}
 items = {}
 globals = {}
 seed = -1
-simulate("inicio", unlocks, items, globals, seed, 100)
+simulate("central_desbloqueios", unlocks, items, globals, seed, 1000)

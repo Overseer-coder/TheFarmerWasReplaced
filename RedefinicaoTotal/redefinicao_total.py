@@ -1,0 +1,1 @@
+leaderboard_run(Leaderboards.Fastest_Reset, "central_desbloqueios", 1000)
