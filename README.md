@@ -30,8 +30,8 @@ Exemplo de cactus desordenados:
 A implementação deste algoritmo, encontrado na pasta **"Cactus"**, é dividido em 3 partes:
 
 - Cada drone tomará sua coluna de responsabilidade e plantará cactus em toda a sua extensão;
-- Após o plantio, os drones serão dispostos em cada linha do grid e ordenarão, horizontalmente, todos os cactus da linha, de forma que  fiquem dispostos em ordem crescente, da direita para a esquerda;
-- Por fim, os drones serão dispostos em cada coluna do grid e ordenarão, verticalmente, todos os cactus da coluna, de forma que  fiquem dispostos em ordem crescente, de cima para baixo;
+- Após o plantio, os drones serão dispostos em cada linha do grid e ordenarão, horizontalmente, todos os cactus da linha, de forma que  fiquem dispostos em ordem decrescente, da direita para a esquerda;
+- Por fim, os drones serão dispostos em cada coluna do grid e ordenarão, verticalmente, todos os cactus da coluna, de forma que  fiquem dispostos em ordem decrescente, de cima para baixo;
 
 Com isso, as regras para a ordenação dos cactus será satisfeita, e a coleta ordenada será concretizada.
 
