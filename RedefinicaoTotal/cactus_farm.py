@@ -4,8 +4,9 @@ def plant_cactus(cost):
 	clear()
 	
 	while num_items(Items.Cactus) < cost:	
-		primeira_plantacao()
-		ordenar_cactus()
+		todos_plantados = primeira_plantacao()
+		if todos_plantados:
+			ordenar_cactus()
 		
 def primeira_plantacao():
 	movimentos = [North, South]
@@ -15,8 +16,10 @@ def primeira_plantacao():
 				till()
 			if not plant(Entities.Cactus):
 				colher_dependencia.colher(Entities.Cactus, Unlocks.Cactus, 100)
+				return False
 			move(movimentos[i % 2])
 		move(East)
+	return True
 			
 def ordenar_cactus():
 	movimentos = [North, South]
