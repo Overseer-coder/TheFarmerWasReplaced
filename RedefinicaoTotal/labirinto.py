@@ -21,6 +21,6 @@ def criar_labirinto():
 	substancia = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
 	
 	while num_items(Items.Weird_Substance) < substancia:
-		colher_dependencia.colher(Entities.Treasure, Unlocks.Mazes, 1000)
+		colher_dependencia.colher(Entities.Treasure, Unlocks.Mazes, 250)
 	
 	use_item(Items.Weird_Substance, substancia)

@@ -10,7 +10,7 @@ import labirinto
 def desbloquear(desbloqueio):
 	
 	if num_unlocked(Unlocks.Sunflowers) > 0:
-		sunflower_farm.plant_sunflower(num_unlocked(Unlocks.Sunflowers) * 100)
+		sunflower_farm.plant_sunflower(num_unlocked(Unlocks.Sunflowers) * 200)
 	
 	unlock_cost = get_cost(desbloqueio)
 	unlock_comprado = False
