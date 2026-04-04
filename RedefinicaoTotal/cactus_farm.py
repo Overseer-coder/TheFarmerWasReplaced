@@ -3,8 +3,7 @@ import colher_dependencia
 def plant_cactus(cost):
 	clear()
 	
-	while num_items(Items.Cactus) < cost:
-		colher_dependencia.colher(Entities.Cactus, Unlocks.Cactus, 2000)
+	while num_items(Items.Cactus) < cost:	
 		primeira_plantacao()
 		ordenar_cactus()
 		
@@ -14,7 +13,8 @@ def primeira_plantacao():
 		for _ in range(get_world_size()):
 			if get_ground_type() == Grounds.Grassland:
 				till()
-			plant(Entities.Cactus)
+			if not plant(Entities.Cactus):
+				colher_dependencia.colher(Entities.Cactus, Unlocks.Cactus, 100)
 			move(movimentos[i % 2])
 		move(East)
 			
