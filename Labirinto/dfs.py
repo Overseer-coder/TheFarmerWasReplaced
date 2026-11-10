@@ -1,13 +1,16 @@
 import movimentacao
 
-visitados = []
+visitados = set()
 direcoes = [North, East, South, West]
 
 def DFS(x_ant, y_ant, x_novo, y_novo):
 	
+	if (get_entity_type() != Entities.Hedge):
+		return
+	
 	if (x_novo, y_novo) not in visitados:
 		movimentacao.goto(x_novo, y_novo)
-		visitados.append((x_novo, y_novo))
+		visitados.add((x_novo, y_novo))
 		
 		if get_entity_type() == Entities.Treasure:
 			harvest()
@@ -32,6 +35,8 @@ def DFS(x_ant, y_ant, x_novo, y_novo):
 
 
 clear()
-plant(Entities.Bush)
-use_item(Items.Weird_Substance, get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1))
-DFS(0, 0, 0, 0)
+while True:
+	visitados = set()
+	plant(Entities.Bush)
+	use_item(Items.Weird_Substance, get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1))
+	DFS(0, 0, 0, 0)
