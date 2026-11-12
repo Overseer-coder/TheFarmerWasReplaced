@@ -1,5 +1,5 @@
 # TheFarmerWasReplaced
-The Farmer Was Replaced é um idle game de programação onde automatizamos drones para gerenciarem uma fazenda. O jogo utiliza, como base, uma versão simplificada do Python e com funções extras necessárias para a progreção.
+The Farmer Was Replaced é um idle game de programação onde automatizamos drones para gerenciarem uma fazenda. O jogo utiliza, como base, uma versão simplificada do Python e com funções extras necessárias para a progressão.
 
 ## Multi Drones
 O jogo possui um aspecto super interessante com multi threading. Há um desbloqueio específico **"Unlocks.Megafarm"** em que recebemos drones extras para realizarem funções delegadas aos mesmos. Ao utilizar o comando **"spawn_drone(funcao)"**, um drone será spawnado e realizará a função **"funcao"** até o final antes de desparecer. O principal desafio da utilização dos drone é arquitetar o trabalho conjunto de todos eles, e para fazer isso cada drone será responsável por apenas uma única coluna do grid.
